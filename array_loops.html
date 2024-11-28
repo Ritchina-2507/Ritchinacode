@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.form{
+			margin-bottom: 10px;
+		}
+		.inp{
+			width: 300px;
+			padding: 6px;
+			border: 1px solid lightgrey;
+			outline: grey;
+		}
+		.btn{
+			background-color: steelblue;
+			width: 100px;
+			padding: 10px 0px;
+			font-size: 1em;
+			color: white;
+			border: 1px solid steelblue;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+		.btn:hover{
+			background-color: darkblue;
+		}
+	</style>
+</head> 
+<body>
+	<form>
+		<div class="form">
+			<label>First name</label>
+			<input type="text" name="" placeholder="Enter first name" class="inp">
+		</div>
+		<div class="form">
+			<label>Last name</label>
+			<input type="text" name="" placeholder="Enter last name">
+		</div>
+		<div class="form">
+			<label>occupation</label>
+			<select>
+				<option>-please select-</option>
+				<option>carpenter</option>
+				<option>criminal</option>
+				<option>gboy</option>
+				<option>police</option>
+			</select>
+		</div>
+		<div class="form">
+			<label>How happy are you?</label>
+			<input type="range" name="" min="0" max="100" step="5">
+		</div>
+		<div class="form">
+			<label>Passport</label>
+			<input type="file" name="">
+		</div>
+		<div class="form">
+			<label>About me</label>
+			<textarea placeholder="about me" rows="8" cols="30"></textarea>
+		</div>
+		<div class="form">
+			<label>male</label>
+			<input type="radio" name="gender" value="male">
+			<label>female</label>
+			<input type="radio" name="gender" value="female">
+		</div>
+		<div class="form">
+			<input type="checkbox" name="">
+			<label>I agree something...</label>
+		</div>
+		<div class="form">
+			<input type="submit" name="" class="btn">
+			<input type="button" name="" value="send">
+			<button>click</button>
+		</div>
+	</form>
+</body>
+</html>

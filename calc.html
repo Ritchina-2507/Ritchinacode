@@ -1,0 +1,162 @@
+\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= div, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function view(num)
+        {
+            document.getElementById("result").value+=num
+        }
+        function compute()
+        {
+            let x = document.getElementById("result").value
+            let y = eval (x)
+            document.getElementById("result").value = y
+        }
+        function clr()
+        {
+            document.getElementById("result").value = ""
+        }
+        function off()
+        {
+           document.getElementById("result").value =""
+        }
+        function bee() 
+        {
+            let s = document.getElementById("result").value
+            let t = eval (s)
+           document.getElementById("result").value = ""
+        }
+        function dee() 
+        {
+            let a = document.getElementById("result").value
+            let b = eval (a)
+           document.getElementById("result").value = b
+        }
+    </script>
+    <style>
+        input[type= "button"]{
+          background-color:red;
+          color:black;
+          border:solid blue 2px;
+          width: 100px;
+          padding: 10px;
+          border-radius: 50px;
+
+        }
+        input[type="text"]{
+          background-color: azure;
+          border:solid green 2px;
+          width: 100%;
+          padding: 45px;
+          display: block;
+        }
+        .calc{
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <centre>
+        <h1>simple calculator using javascript</h1>
+        <table>
+            <tr>
+              <!-- <td colspan="3" rowspan="2"><input type="text" id="result"></td> -->
+              <!-- <td colspan="3" rowspan="2"><input type="text" id="result"></td> -->
+              <td><input type="button" value="cl" onclick="clr()"/> </td>
+              <td><input type="button" value="AC" onclick="off()"/> </td>
+              <td colspan="3" rowspan="2"><input type="text" id="result"></td>
+              <!-- <td colspan="3" rowspan="2"><input type="text" id="result"></td> -->
+              <tr>
+              <td><input type="button" value="ON" onclick="on()"/> </td>
+              <td><input type="button" value="DEL" onclick="del()"/> </td>
+              </tr>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="button" value="1" onclick="view('1')"/> </td>
+              <td><input type="button" value="2" onclick="view('2')"/> </td>
+              <td><input type="button" value="3" onclick="view('3')"/> </td>
+              <td><input type="button" value="/" onclick="view('/')"/> </td>
+              <!-- <td><input type="button" value="EXP" onclick="bee()"/> </td> -->
+              <td><button onclick="calculateCos()">COS</button></td>
+           </tr>
+           <tr>
+             <td><input type="button" value="4" onclick="view('4')"/> </td>
+             <td><input type="button" value="5" onclick="view('5')"/> </td>
+             <td><input type="button" value="6" onclick="view('6')"/> </td>
+             <td><input type="button" value="-" onclick="view('-')"/> </td>
+             <!-- <td><input type="button" value="ans" onclick="dee()"/> </td> -->
+             <button onclick="calculateSin()">SIN</button>
+            </tr>
+            <tr>
+             <td><input type="button" value="7" onclick="view('7')"/> </td>
+             <td><input type="button" value="8" onclick="view('8')"/> </td>
+             <td><input type="button" value="9" onclick="view('9')"/> </td>
+             <td><input type="button" value="+" onclick="view('+')"/> </td>
+             <!-- <td><input type="button" value="log(" onclick="compute('log(')"/> </td> -->
+             <button onclick="calculateTan()">TAN</button>
+            </tr>
+            <tr>
+             <td><input type="button" value="." onclick="view('.')"/> </td>
+             <td><input type="button" value="0" onclick="view('0')"/> </td>
+             <td><input type="button" value="=" onclick="compute('=')"/> </td>
+             <td><input type="button" value="*" onclick="view('*')"/> </td>
+             <!-- <td><input type="button" value="hyp(" onclick="compute('hyp('))")/> </td> -->
+             <td><input type="button" value="M-" onclick="memoryMinus(5)"></td>
+            </tr>
+            <tr>
+                <td></td><button onclick="memoryPlus(5)">M+</button></td>
+                <td><button onclick="calculateHypotenuse(3, 4)">HYP</button></td>
+                <!-- <td><input type="button" value="m+" onclick="compute('M+')"/> </td> -->
+                <!-- <td><input type="button" value="m-" onclick="compute('M-')"/> </td> -->
+                <!-- <td><input type="button" value="sin(" onclick="compute('Sin())")/> </td> -->
+                <!-- <td><input type="button" value="cos(" onclick="compute('Cos())")/> </td> -->
+                <!-- <td><input type="button" value="tan(" onclick="compute('Tan('))")/> </td> -->
+            </tr>
+            <tr>
+                <!-- <td><input type="button" value="pol(" onclick="compute('Pol('))")/> </td> -->
+            </tr>
+            <!-- <input id="angle" type="number"> -->
+            <!-- <button onclick="calculateCos()">COS</button> -->
+            <!-- <button onclick="calculateSin()">SIN</button> -->
+            <!-- <button onclick="calculateTan()">TAN</button> -->
+            <!-- <button onclick="memoryMinus(5)">M-</button> -->
+            <!-- <button onclick="memoryPlus(5)">M+</button> -->
+            <!-- <button onclick="calculateHypotenuse(3, 4)">HYP</button> -->
+
+        </table>
+    </centre>
+    <script>
+   function calculateCos() {
+  const angle = document.getElementById('angle').value;
+  const result = Math.cos((angle * Math.PI) / 180);
+  console.log(`COS result: ${result}`);
+}
+
+function calculateSin() {
+  const angle = document.getElementById('angle').value;
+  const result = Math.sin((angle * Math.PI) / 180);
+  console.log(`SIN result: ${result}`);
+}
+
+function calculateTan() {
+  const angle = document.getElementById('angle').value;
+  const result = Math.tan((angle * Math.PI) / 180);
+  console.log(`TAN result: ${result}`);
+}
+
+function calculateHypotenuse() {
+  const a = 3;
+  const b = 4;
+  const result = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+  console.log(`HYP result: ${result}`);
+}
+
+    </script>
+</body>
+</html>

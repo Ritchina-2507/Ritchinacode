@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.triangle{
+			width: 0px;
+			height: 0px;
+			/*border-bottom: 0px solid blue;*/
+			border-top: none;
+			border-left: 100px solid transparent;
+			border-right: 100px solid transparent;
+			/*background-image: linear-gradient(red, blue, green);*/
+			animation-name: shoe;
+			animation-iteration-count: infinite;
+			animation-duration: 0.5s;
+			display: inline-block;
+		}
+		@keyframes shoe{
+			/*from{
+				background-color: red;
+				border-top-right-radius: 0px;
+				border-top-left-radius: 0px;
+				margin-left: 0px;
+			}
+			to{
+				background-color: blue;
+				border-top-left-radius: 0px;
+				border-top-right-radius:0px;
+				margin-left: 0px;
+			}*/
+			0%{
+				transform: rotate(0deg);
+				border-bottom: 300px solid red;
+			}
+			10%{
+				transform: rotate(36deg);
+				border-bottom: 300px solid blue;
+			}
+			20%{
+				transform: rotate(72deg);
+				border-bottom: 300px solid green;
+			}
+			30%{
+				transform: rotate(108deg);
+				border-bottom: 300px solid orange;
+			}
+			40%{
+				transform: rotate(144deg);
+				border-bottom: 300px solid yellow;
+			}
+			50%{
+				transform: rotate(180deg);
+				border-bottom: 300px solid purple;
+			}
+			60%{
+				transform: rotate(216deg);
+				border-bottom: 300px solid pink;
+			}
+			70%{
+				transform: rotate(252deg);
+				border-bottom: 300px solid brown;
+			}
+			80%{
+				transform: rotate(288deg);
+				border-bottom: 300px solid violet;
+			}
+			90%{
+				transform: rotate(324deg);
+				border-bottom: 300px solid lightgreen;
+			}
+			100%{
+				transform: rotate(360deg);
+				border-bottom: 300px solid red;
+			}
+		}
+		.circle{
+			width: 200px;
+			height: 200px;
+			background-image: linear-gradient(red,red,red,red,yellow,yellow,yellow,yellow,blue,red,red,red,red,yellow,yellow,yellow,yellow);
+			border-radius: 50%;
+			animation-duration:0.5s;
+			animation-iteration-count: infinite;
+			animation-name: grace;
+			display: inline-block; 
+		}
+		@keyframes grace{
+			from{
+				/*background-color: red;*/
+				border-radius: 50%;
+				margin-left: 100px;
+			}
+			to{
+				/*background-color: blue;*/
+				border-radius: 100%;
+				margin-left: 100px;
+		    }
+		    0%{
+			    transform: rotate(0deg);
+			    /*transform: rotateY(0deg);*/
+		    }
+		    20%{
+			    transform: rotate(45deg);
+			    /*transform: rotateY(45deg);*/
+		    }
+		    40%{
+			    transform: rotate(90deg);
+			    /*transform: rotateY(90deg);*/
+		    }
+		    60%{
+			    transform: rotate(135deg);
+			    /*transform: rotateY(135deg);*/
+		    }
+		    80%{
+			    transform: rotate(245deg);
+			    /*transform: rotateZ(245deg);*/
+		    }
+		    100%{
+			    transform: rotate(360deg);
+			    /*transform: rotateZ(360deg);*/
+		    }
+
+	    }
+	    .square{
+	    	width: 200px;
+	    	height: 200px;
+	    	background-image: linear-gradient(to right green,pink,yellow);
+	    	animation-name: flee;
+	    	animation-duration: 3s;
+	    	animation-iteration-count: infinite;
+	    	display: inline-block;
+	    }
+	    @keyframes flee{
+	    	from{
+	    		background-color: green;
+	    		border-top-left-radius: 0px;
+	    		margin-left: 100px;
+	    		border-top-right-radius: 0px;
+	    		height: 0px;
+	    		width: 0px;
+	    	}
+	    	to{
+	    		background-color: yellow;
+	    		border-top-right-radius: 0px;
+	    		margin-left: 0px;
+	    		border-top-left-radius: 0px;
+	    		height: 200px;
+	    		width: 200px; 
+	    	}/*
+	    	to{
+	    		background-color: pink;
+	    		border-top-right-radius: 0px;
+	    		border-top-left-radius: 0px;
+	    	}*/
+	    	0%{
+	    		width: 200px;
+	    		height: 200px;
+	    	}
+	    	20%{
+	    		width: 160px;
+	    		height: 160px;
+	    	}
+	    	40%{
+	    		width: 120px;
+	    		height: 120px;
+	    	}
+	    	60%{
+	    		width: 80px;
+	    		height: 80px;
+	    	}
+	    	80%{
+	    		width: 40px;
+	    		height: 40px; 
+	    	}
+	    	100%{
+	    		width: 200px;
+	    		height: 200px;
+	    	}
+	    }.rectangle{
+	    	width: 200px;
+	    	height: 100px;
+	    	background-image: linear-gradient( black,black,black,black,black,black,black,black,black,blue,blue,blue,blue,blue,black,black,black,black,black,black,black,black,black);
+	    	animation-name: cola;
+	    	animation-iteration-count: infinite;
+	    	animation-duration: 0.5s
+	    }
+	    @keyframes cola{
+	    	from{
+	    		/*background-color: black;*/
+	    		border-top-right-radius: 0px;
+	    		margin-left: 0px;
+	    		border-top-left-radius: 0px; 
+	    	}
+	    	to{
+	    		/*background-color: blue;*/
+	    		border-top-right-radius: 0px;
+	    		margin-left:500px;
+	    		border-top-left-radius: 0px;
+	    	}
+
+	    }
+
+	</style>
+</head>
+<body>
+	  <div class="triangle"></div>
+	  <div class="circle"></div>
+	  <div class="square"></div>
+	  <div class="rectangle"></div>
+
+</body>
+</html>

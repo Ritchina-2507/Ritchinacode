@@ -1,0 +1,8 @@
+.w{
+	width:100%;
+	height:350px;
+}
+.w :hover{
+	background: red;
+	transition: 2s;
+}
